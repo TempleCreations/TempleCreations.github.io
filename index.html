@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temples'display Cabinets | Custom getId Stand Manufacturer</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 60px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .hero-section {
+            background-image: url('custom_display_cabinets.jpg');
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .contact-form input,
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Custom Display Cabinets for Temples 🙌</h1>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h2>Elevate Your Temple's idols with Elegantly Designed Cabins</h2>
+        <p>Tailored display solutions that respect and enhance the sacred atmosphere of your temple.</p>
+    </div>
+
+    <!-- Services Section -->
+    <h2>Our Expertise in Design & Manufacturing</h2>
+    <div class="services">
+        <div class="service-card">
+            <h3>CUSTOM DESIGN AND MANUFACTURING</h3>
+            <p>Create unique display solutions that perfectly fit your temple's aesthetic and spiritual needs.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Premium Woodworking & Finishing</h3>
+            <p>High-quality materials, custom finishes, and expert craftsmanship for lasting durability.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Installation Services</h3>
+            <p>We handle everything from installation to testing to ensure your display柜 look flawless in its new home.</p>
+        </div>
+    </div>
+
+    <!-- Portfolio Section (You can add a link here for an album or portfolio folder) -->
+    <h2>View Our Masterpiece Collection</h2>
+    <a href="portfolio-cabinets" target="_blank">Explore Our Collection →</a>
+
+    <!-- Contact Us Section -->
+    <h2>Contact Us for Your Temple Design Needs</h2>
+    
+    <!-- Form Submitter -->
+    <div class="form-container">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea rows="5" placeholder="Message"></textarea>
+        <input type="tel" placeholder="Phone Number">
+        
+        <button type="submit">Send Message</button>
+
+    </div>
+
+    <!-- Google Sheet Submitter -->
+    <h3>Get in Touch for a Detailed Proposal</h3>
+    
+    <script>
+        // Function to handle form submission
+        function handleSubmitForm(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+            const phoneNumber = formData.get('tel');
+
+            // Send data to Google Sheet
+            fetch('/submit-to-spreadsheet', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    message,
+                    phoneNumber
+                })
+            }).then(response => console.log('Form submitted successfully!'))
+        }
+
+        // Get the form element by ID (you need to add this in your HTML)
+        const formElement = document.getElementById('submitForm');
+        
+        formElement.addEventListener('submit', handleSubmitForm);
+    </script>
+
+    <!-- Links for Further Reading or Contact Information -->
+    <p>For a free consultation, visit us at: [Insert URL]</p>
+</div>
+
+<!-- Add Google Sheet Link Section -->
+<div class="form-container">
+    <h2>Ready to Get Started? Fill Out This Form Below...</h2>
+    
+    <!-- You can use this link if you have your own Google Sheet linked here -->
+</div>
+
+<!-- Links for Further Reading or Contact Information (You should add actual links based on your website's needs) -->
+</body>
+</html>
